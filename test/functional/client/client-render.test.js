@@ -6,12 +6,12 @@ describe('Client Render', function() {
     history.push('/')
   })
 
-  const barResponse = [ 'some', 'test', 'response', 'data' ]
+  const homeResponse = [ 'some', 'test', 'response', 'data' ]
 
   beforeEach((done) => {
-    fetchMock.get('/api/bar', {
+    fetchMock.get('/api/', {
       status: 200,
-      body: { bar: barResponse },
+      body: { home: homeResponse },
       headers:  {
         'Content-Type': 'application/json',
         'Content-Length': '1',
@@ -27,21 +27,20 @@ describe('Client Render', function() {
   })
 
   it('should set the page title', ()=> {
-    expect(document.title).to.eql('Breko Hub')
+    expect(document.title).to.eql('Dreamcatch')
   })
 
   it('should set the meta description and chartset', () => {
     const metaCharset = document.querySelector('meta[charset]')
     expect(metaCharset.getAttribute('charset')).to.eql('utf-8')
     const metaDesc = document.querySelector('meta[name=description]')
-    expect(metaDesc.getAttribute('content')).to.contain('Breko Hub')
+    expect(metaDesc.getAttribute('content')).to.contain('Dreamcatch')
   })
 
   it(`only renders the HomeRoute`, () => {
     expect(this.wrapper.find('.HomeRoute')).to.be.present()
     expect(this.wrapper.find('.OopsRoute')).not.to.be.present()
     expect(this.wrapper.find('.NotFoundRoute')).not.to.be.present()
-    expect(this.wrapper.find('.BarRoute')).not.to.be.present()
     expect(this.wrapper.find('.PrivateRoute')).not.to.be.present()
   })
 
@@ -68,25 +67,25 @@ describe('Client Render', function() {
       })
     })
 
-    describe('/bar', ()=> {
+    describe('/', ()=> {
       beforeEach((done) => {
-        history.push('/bar')
+        history.push('/')
         defer(done)
       })
 
-      it('should render the .BarRoute', ()=> {
-        expect(this.wrapper.find('.BarRoute')).to.have.length(1)
+      it('should render the .HomeRoute', ()=> {
+        expect(this.wrapper.find('.HomeRoute')).to.have.length(1)
       })
 
       it('should update the page title', ()=> {
-        expect(document.title).to.eql('Bar | Breko Hub')
+        expect(document.title).to.eql('Dreamcatch')
       })
 
-      it('should render the response from /api/bar', ()=> {
-        barResponse.forEach(item => {
-          const barItem = this.wrapper.find({ children: item })
-          expect(barItem).to.have.length(1)
-          expect(barItem.type()).to.eql('p')
+      it('should render the response from /api/', ()=> {
+        homeResponse.forEach(item => {
+          const homeItem = this.wrapper.find({ children: item })
+          expect(homeItem).to.have.length(1)
+          expect(homeItem.type()).to.eql('p')
         })
       })
     })

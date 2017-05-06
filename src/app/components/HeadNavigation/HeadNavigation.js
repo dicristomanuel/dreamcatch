@@ -11,9 +11,6 @@ export default class HeadNavigation extends React.Component {
         <NavLink exact activeClassName={styles.active} to='/'>
           Home
         </NavLink>
-        <NavLink activeClassName={styles.active} to='/bar'>
-          Bar
-        </NavLink>
         <NavLink activeClassName={styles.active} to='/private'>
           Private
         </NavLink>

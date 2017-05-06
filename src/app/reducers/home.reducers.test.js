@@ -1,8 +1,8 @@
 import { PENDING, REJECTED, FULFILLED } from 'redux-promise-middleware'
-import { barReducers } from './bar.reducers'
+import { homeReducers } from './home.reducers'
 import { API_FETCH } from 'app/actions/types'
 
-describe('Bar Reducers', ()=> {
+describe('Home Reducers', ()=> {
   const initialState = {
     isPending: false,
     error: false,
@@ -11,7 +11,7 @@ describe('Bar Reducers', ()=> {
   const irrelevantAction = { type: 'IRRELEVANT_ACTION' }
 
   it('returns the initialState when no state', () => {
-    expect(barReducers(undefined, irrelevantAction)).to.eql(initialState)
+    expect(homeReducers(undefined, irrelevantAction)).to.eql(initialState)
   })
 
   describe('API_FETCH_PENDING', ()=> {
@@ -26,7 +26,7 @@ describe('Bar Reducers', ()=> {
         type: `${API_FETCH}_${PENDING}`,
       }
       expect(
-        barReducers(stateBeforeDispatch, apiFetchPendingAction)
+        homeReducers(stateBeforeDispatch, apiFetchPendingAction)
       ).to.eql({
         ...initialState,
         isPending: true,
@@ -48,7 +48,7 @@ describe('Bar Reducers', ()=> {
         payload: new Error('api_fetch error'),
       }
       expect(
-        barReducers(stateBeforeDispatch, apiFetchRejectedAction)
+        homeReducers(stateBeforeDispatch, apiFetchRejectedAction)
       ).to.eql({
         ...initialState,
         error: apiFetchRejectedAction.payload,
@@ -68,14 +68,14 @@ describe('Bar Reducers', ()=> {
         type: `${API_FETCH}_${FULFILLED}`,
         error: true,
         payload: {
-          bar: [ 'some', 'test', 'data' ],
+          home: [ 'some', 'test', 'data' ],
         },
       }
       expect(
-        barReducers(stateBeforeDispatch, apiFetchFulfilledAction)
+        homeReducers(stateBeforeDispatch, apiFetchFulfilledAction)
       ).to.eql({
         ...initialState,
-        data: apiFetchFulfilledAction.payload.bar,
+        data: apiFetchFulfilledAction.payload.home,
       })
     })
   })

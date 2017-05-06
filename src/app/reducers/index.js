@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import { flashReducers as flash } from './flash.reducers'
-import { barReducers as bar } from './bar.reducers'
+import { homeReducers as home } from './home.reducers'
 
 export default combineReducers({
   flash,
-  bar,
+  home,
   routing: routerReducer,
 })

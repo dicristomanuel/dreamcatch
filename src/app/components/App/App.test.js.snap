@@ -8,9 +8,6 @@ exports[`App Component Main renders routes inside Main 1`] = `
       path="/" />
     <CodeSplitRoute
       load={[Function load]}
-      path="/bar" />
-    <CodeSplitRoute
-      load={[Function load]}
       path="/oops" />
     <CodeSplitRoute
       load={[Function load]}

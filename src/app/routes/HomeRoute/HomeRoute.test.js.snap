@@ -1,27 +1,23 @@
 exports[`HomeRoute Component matches snapshot 1`] = `
 <section
   className="HomeRoute">
+  <h3>
+    Home
+  </h3>
   <p>
-    Welcome to breko-hub
+    This route is making an api request
   </p>
   <p>
-    This app is intentionally minimal!
-  </p>
-  <p>
-    There are various mini-examples showing how you can customise to your needs.
-  </p>
-  <p>
-    Breko hub is designed to be quick to develop with:
-  </p>
-  <p>
-    Make a change to the styles in a 
+    If you change the response from 
     <code>
-      *.module.scss
+      server/api/
     </code>
-     file or a component and see for yourself!
+     endpoint
   </p>
   <p>
-    Even the server routes and api endpoints auto update on changes very quickly!
+    And then navigate away and back to this route, you'll see the changes immediately
   </p>
+  <div
+    className="src-app-routes-HomeRoute-HomeRoute-module-block" />
 </section>
 `;

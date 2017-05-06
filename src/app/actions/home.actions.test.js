@@ -1,8 +1,8 @@
 import { API_FETCH } from 'app/actions/types'
 import { request } from 'app/utils'
-import { apiFetch } from './bar.actions'
+import { apiFetch } from './home.actions'
 
-describe('Bar Actions', ()=> {
+describe('Home Actions', ()=> {
   describe('apiFetch()', ()=> {
     beforeEach(()=> {
       sinon.stub(request, 'fetch')
@@ -16,12 +16,12 @@ describe('Bar Actions', ()=> {
       expect(apiFetch()).to.have.property('type', API_FETCH)
     })
 
-    it('calls fetch with /api/bar', () => {
+    it('calls fetch with /api/', () => {
       apiFetch()
-      expect(request.fetch).to.have.been.calledWith('/api/bar')
+      expect(request.fetch).to.have.been.calledWith('/api/')
     })
 
-    it('resolves the promise from fetching /api/bar', async () => {
+    it('resolves the promise from fetching /api/', async () => {
       const requestResolve = { some: 'data' }
       request.fetch.returns(Promise.resolve(requestResolve))
 

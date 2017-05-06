@@ -26,7 +26,7 @@ describe('Msg Component', function() {
   })
 
   it('should transfer props to the root element', ()=> {
-    const otherProps = { id: 'bar', 'data-other': 'prop' }
+    const otherProps = { id: 'home', 'data-other': 'prop' }
     this.tree = shallow(<Msg msg={this.msg} {...otherProps} />)
     expect(this.tree.props()).to.shallowDeepEqual(otherProps)
   })

@@ -52,12 +52,12 @@ describe('App Component', function() {
     it('sets the meta options', () => {
       expect(this.tree.find(DocumentMeta).node).to.eql(
         <DocumentMeta
-          defaultTitle='Breko Hub'
-          titleTemplate='%s | Breko Hub'>
+          defaultTitle='Dreamcatch'
+          titleTemplate='%s | Dreamcatch'>
           <html lang='en' />
           <meta charSet='utf-8' />
           <meta name='viewport' content='width=device-width,initial-scale=1.0' />
-          <meta name='description' content='Breko Hub, a minimal boilerplate for building universal react applications' />
+          <meta name='description' content='Dreamcatch, a minimal boilerplate for building universal react applications' />
           <meta name='keywords' content='react,redux,react-router,koa,universal,babel,es7,hmr,webpack' />
         </DocumentMeta>
       )
@@ -76,9 +76,9 @@ describe('App Component', function() {
   })
 
   describe('Title', () => {
-    it('should have "Breko Hub" as text child', () => {
+    it('should have "Dreamcatch" as text child', () => {
       const title = this.tree.find('h1')
-      expect(title.text()).to.contain('Breko Hub')
+      expect(title.text()).to.contain('Dreamcatch')
     })
   })
 

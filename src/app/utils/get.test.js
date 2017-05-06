@@ -3,8 +3,8 @@ import get from './get'
 describe('Get', function() {
   beforeEach(()=> {
     this.object = {
-      foo: 'bar',
-      bar: {
+      foo: 'home',
+      home: {
         deeply: {
           nested: 'value',
           another: 1,
@@ -33,10 +33,10 @@ describe('Get', function() {
   })
 
   it('gets a deep property from an object by dot syntax', ()=> {
-    const getDeeplyNested = get('bar.deeply.nested')
+    const getDeeplyNested = get('home.deeply.nested')
     expect(
       getDeeplyNested(this.object)
-    ).to.eql(this.object.bar.deeply.nested)
+    ).to.eql(this.object.home.deeply.nested)
   })
 
   it('sets default as second argument when supplied', () => {

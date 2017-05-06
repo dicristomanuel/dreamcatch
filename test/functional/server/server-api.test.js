@@ -26,11 +26,11 @@ describe('Server API', function() {
       .end(done)
   })
 
-  it('should respond to the bar route', (done)=> {
+  it('should respond to the home route', (done)=> {
     supertest(app.callback())
-      .get('/api/bar')
+      .get('/api/')
       .expect('content-type', /application\/json/)
-      .expect({ bar: [ 'bruce', 'willis', 'wet', 'himself' ] })
+      .expect({ home: [ 'bruce', 'willis', 'wet', 'himself' ] })
       .end(done)
   })
 })

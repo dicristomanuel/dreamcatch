@@ -1,15 +1,36 @@
+import { connect } from 'react-redux';
+// import DocumentMeta from 'react-helmet';
+import * as homeActions from 'app/actions/home.actions';
+import { get } from 'app/utils';
+import styles from './HomeRoute.module.scss';
 
+@connect(state => ({
+  home: get('home.data')(state),
+}), homeActions)
 export default class HomeRoute extends React.Component {
+  static defaultProps = {
+    home: [ 'stuff' ],
+  };
+
+  state = {
+    returned: undefined,
+  }
+
+  componentDidMount() {
+    this.props.apiFetch();
+  }
+
   render() {
     return (
       <section className='HomeRoute'>
-        <p>Welcome to breko-hub</p>
-        <p>This app is intentionally minimal!</p>
-        <p>There are various mini-examples showing how you can customise to your needs.</p>
-        <p>Breko hub is designed to be quick to develop with:</p>
-        <p>Make a change to the styles in a <code>*.module.scss</code> file or a component and see for yourself!</p>
-        <p>Even the server routes and api endpoints auto update on changes very quickly!</p>
+        <div className={styles.main}>
+          {
+            this.props.home.map((item, index) => {
+              return <p key={index}>{item}</p>;
+            })
+          }
+        </div>
       </section>
-    )
+    );
   }
 }
