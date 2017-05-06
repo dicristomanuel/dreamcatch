@@ -1,7 +1,7 @@
 {
-  "name": "breko-hub",
-  "version": "1.0.0-rc5",
-  "description": "Babel React Koa - Hot Universal Boilerplate",
+  "name": "dreamcatch",
+  "version": "1.0.0",
+  "description": "",
   "moduleRoots": [
     "src"
   ],
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomatau/breko-hub.git"
+    "url": "git+https://github.com/dicristomanuel/dreamcatch"
   },
   "keywords": [
     "babel",
@@ -38,16 +38,16 @@
     "babel-transforms",
     "webpack"
   ],
-  "author": "Thomas `tomatao` Hudspith-Tatham <tom@tomatao.co.uk>",
+  "author": "Manuel Di Cristo <dicristomanuel@icloud.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tomatau/breko-hub/issues"
+    "url": "https://github.com/dicristomanuel/dreamcatch/issues"
   },
   "engines": {
     "node": "~6.10",
     "npm": "~3.x"
   },
-  "homepage": "https://github.com/tomatau/breko-hub#readme",
+  "homepage": "https://github.com/dicristomanuel/dreamcatch#readme",
   "greenkeeper": {
     "ignore": [
       "redux-promise-middleware"

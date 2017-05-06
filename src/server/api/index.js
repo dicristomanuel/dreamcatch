@@ -12,6 +12,9 @@ apiRouter
   .get('bar', '/bar', (ctx) => {
     ctx.response.body = { bar: [ 'bruce', 'willis', 'wet', 'himself' ] }
   })
+  .get('love', '/love', (ctx) => {
+    ctx.response.body = { bar: [ 'bruce', 'willis', 'wet', 'himself' ] }
+  })
   .all('not-found', '*', (ctx) => {
     ctx.response.status = 404
     ctx.response.body = { error: STATUS_CODES[status] }
