@@ -5,6 +5,7 @@
 .app {
   font-family: 'Open Sans', sans-serif;
   color: $font-color;
+  position: relative;
   font: {
     size: rem(17px);
   }
@@ -12,4 +13,5 @@
 
 .content {
   padding: rem(5px);
+  padding-top: 60px;
 }

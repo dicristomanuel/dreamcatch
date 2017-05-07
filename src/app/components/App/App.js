@@ -1,7 +1,7 @@
 import DocumentMeta from 'react-helmet'
 import { Switch, Route } from 'react-router-dom'
 import HeadNavigation from 'app/components/HeadNavigation/HeadNavigation'
-import HomepageHero from 'app/components/HomepageHero/HomepageHero'
+// import HomepageHero from 'app/components/HomepageHero/HomepageHero'
 import FlashMessages from 'app/components/@FlashMessages/FlashMessages'
 
 import CodeSplit from 'app/components/CodeSplit'
@@ -24,7 +24,7 @@ export default class App extends React.Component {
           <meta name='keywords' content='react,redux,react-router,koa,universal,babel,es7,hmr,webpack' />
         </DocumentMeta>
         <HeadNavigation />
-        <HomepageHero />
+      {/*<HomepageHero />*/}
         <FlashMessages />
         <main className={style.content}>
           <Switch>
