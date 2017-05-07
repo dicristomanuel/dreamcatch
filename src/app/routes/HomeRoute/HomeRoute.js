@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 // import DocumentMeta from 'react-helmet';
 import * as homeActions from 'app/actions/home.actions';
 import { get } from 'app/utils';
-import styles from './HomeRoute.module.scss';
+// import styles from './HomeRoute.module.scss';
 
 @connect(state => ({
   home: get('home.data')(state),
@@ -23,13 +23,7 @@ export default class HomeRoute extends React.Component {
   render() {
     return (
       <section className='HomeRoute'>
-        <div className={styles.main}>
-          {
-            this.props.home.map((item, index) => {
-              return <p key={index}>{item}</p>;
-            })
-          }
-        </div>
+
       </section>
     );
   }

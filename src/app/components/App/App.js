@@ -1,10 +1,10 @@
 import DocumentMeta from 'react-helmet'
 import { Switch, Route } from 'react-router-dom'
 import HeadNavigation from 'app/components/HeadNavigation/HeadNavigation'
+import HomepageHero from 'app/components/HomepageHero/HomepageHero'
 import FlashMessages from 'app/components/@FlashMessages/FlashMessages'
 
 import CodeSplit from 'app/components/CodeSplit'
-import avatarPath from 'assets/avatar.jpeg'
 import style from './App.module.scss'
 
 const log = debug('App.js')
@@ -24,9 +24,8 @@ export default class App extends React.Component {
           <meta name='keywords' content='react,redux,react-router,koa,universal,babel,es7,hmr,webpack' />
         </DocumentMeta>
         <HeadNavigation />
+        <HomepageHero />
         <FlashMessages />
-        <img src={avatarPath} alt='me' width='70' />
-        <h1>Dreamcatch</h1>
         <main className={style.content}>
           <Switch>
             <CodeSplitRoute

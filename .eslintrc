@@ -16,7 +16,7 @@
     "no-unexpected-multiline": 2,
     "space-before-function-paren": [1, "never"],
     "require-yield": 0,
-    "semi": ["error", "always"]
+    "semi": [0, "always"]
   },
   "plugins": [
     "react"
