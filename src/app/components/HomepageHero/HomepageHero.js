@@ -23,14 +23,19 @@ export default class HomepageHero extends React.Component {
   render() {
     return (
       <div className={styles['main-hero']}>
+
         <div className={styles.rewards}>
-          These are the rewards
+          <div className={styles['game-icon']} />
+          <div className={styles['game-amount']} />
+          <div className={styles['game-button']} />
         </div>
+
         <div className={styles['games-container']}>
-          <div className={styles['always-win']}></div>
-          <div className={styles['classic-lotto']}></div>
-          <div className={styles['slot']}></div>
+          <div className={styles['always-win']} />
+          <div className={styles['classic-lotto']} />
+          <div className={styles['slot']} />
         </div>
+
       </div>
     );
   }
