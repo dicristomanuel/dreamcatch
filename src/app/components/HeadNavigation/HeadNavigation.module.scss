@@ -6,17 +6,17 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+  top: 10px;
   left: 0;
   right: 0;
+  z-index: 1;
 
   a {
-    color: gray;
+    color: white;
     margin: rem(15px);
     text-decoration: none;
-
-    &:last-of-type {
-      //margin-right: 0;
-    }
+    font-size: 15px;
+    letter-spacing: 1px;
   }
 
   .logo {
@@ -25,9 +25,10 @@
     background-size: contain;
     width: 50px;
     height: 50px;
+    background-position: center;
   }
 }
 
 a.active {
-  color: $active-color;
+  border-bottom: 1px solid white;
 }

@@ -1,10 +1,9 @@
-// placeholder file
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 @import '~vars';
 @import '~tao-scss/index';
 
-$body-colour: #444;
-
 body {
-  color: $body-colour;
-  font-family: Arial;
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent; // find out where white is coming from
+  margin: 0;
 }

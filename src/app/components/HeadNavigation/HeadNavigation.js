@@ -8,13 +8,13 @@ export default class HeadNavigation extends React.Component {
     const { ...props } = this.props;
     return (
       <nav className={styles.nav} {...props}>
-        <div className={styles.logo}></div>
         <NavLink exact activeClassName={styles.active} to='/'>
           WINNING
         </NavLink>
         <NavLink exact activeClassName={styles.active} to='/something'>
           HOW IT WORKS
         </NavLink>
+        <div className={styles.logo}></div>
         <NavLink exact activeClassName={styles.active} to='/else'>
           GIVING BACK
         </NavLink>

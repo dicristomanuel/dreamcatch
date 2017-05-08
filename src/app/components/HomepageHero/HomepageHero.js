@@ -2,7 +2,7 @@
 // import DocumentMeta from 'react-helmet';
 // import * as homeActions from 'app/actions/home.actions';
 // import { get } from 'app/utils';
-// import styles from './HomeRoute.module.scss';
+import styles from './HomepageHero.module.scss';
 
 // @connect(state => ({
 //   home: get('home.data')(state),
@@ -22,8 +22,15 @@ export default class HomepageHero extends React.Component {
 
   render() {
     return (
-      <div>
-        something in here
+      <div className={styles['main-hero']}>
+        <div className={styles.rewards}>
+          These are the rewards
+        </div>
+        <div className={styles['games-container']}>
+          <div className={styles['always-win']}></div>
+          <div className={styles['classic-lotto']}></div>
+          <div className={styles['slot']}></div>
+        </div>
       </div>
     );
   }
